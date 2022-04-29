@@ -1,0 +1,165 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+container {
+  scroll-snap-type: y mandatory;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section {
+  position: relative;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.content_edu {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page {
+  display: flex;
+}
+
+.pInter {
+  font-family: "Inter";
+}
+
+.pMontserrat {
+  font-family: "Montserrat";
+}
+
+.work_block {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 25px;
+}
+
+.work_logo {
+  width: 6rem;
+  margin: 1rem;
+  transition: ease all 0.2s;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.work_logo:hover {
+  transform: scale(1.2, 1.2);
+}
+
+#pageWork {
+  flex-direction: column;
+}
+
+#pageEdu {
+  flex-direction: column;
+}
+
+#pageContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#map {
+  height: 40rem;
+  width: 60%;
+  border-radius: 3px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#firstPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nameDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#contactDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#personPicture {
+  width: 90vh;
+  object-fit: contain;
+}
+
+#profilePic {
+  width: 15rem;
+  padding: 2rem;
+  border-radius: 20rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  font-size: 2rem;
+}

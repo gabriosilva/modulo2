@@ -1,0 +1,71 @@
+.home-img {
+  width: 28rem;
+  object-fit: contain;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+.work-card {
+  width: 20rem;
+  height: 28rem;
+  transition: 0.2s ease all;
+  margin: 3rem;
+}
+
+.work-card:hover {
+  transform: scale(1.1,1.1);
+}
+
+#profilePic {
+  width: 20rem;
+  border-radius: 10rem;
+  border-color: rgb(43, 43, 43);
+  border-width: 1px;
+}
+
+
+.font-inter {
+  font-family: "Inter";
+}
+
+.font-montserrat {
+  font-family: "Montserrat";
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  font-size: 2rem;
+}
+
+section {
+  scroll-snap-align: start;
+}

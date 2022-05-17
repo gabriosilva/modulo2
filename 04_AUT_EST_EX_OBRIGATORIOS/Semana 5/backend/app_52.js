@@ -13,6 +13,11 @@ app.use(express.static("../frontend/"));
 app.use(express.json());
 
 /* Definição dos endpoints */
+
+/* retorna um objeto "profissional", contendo as experiencias
+	e nome do profissional, pelo cpf
+ /profissional?cpf=11111111 */
+
 app.get("/profissional", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -46,6 +51,10 @@ app.get("/profissional", (req, res) => {
   db.close();
 });
 
+/* adiciona um objeto "experiencia", ao banco de dados
+	 utilizando o cpf "profissional" como input */
+
+// utiliza unm corpo JSON para POST
 app.post("/profissional/experiencia", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*");

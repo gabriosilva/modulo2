@@ -49,6 +49,39 @@ function productExchange(productValue, nList, hMap) {
   }
 }
 
+// insertion sort algorithm for sorting arrays
+
+function insertionSortArray(array) {
+  const n = array.length;
+  for (let i = 1; i < n; i++) {
+    let currentChar = array[i];
+    let previousIndex = i - 1;
+    while (previousIndex > -1 && currentChar < array[previousIndex]) {
+      array[previousIndex + 1] = array[previousIndex];
+      previousIndex--;
+    }
+    array[previousIndex + 1] = currentChar;
+  }
+  return array;
+}
+
+// binarySearch recursive algorithm
+
+function binarySearch(array, low, high, element) {
+  if (low > high) {
+    return null;
+  }
+  let half = Math.floor((low + high) / 2);
+
+  if (element == array[half]) {
+    return half;
+  } else if (element < array[half]) {
+    return binarySearch(array, low, half - 1, element);
+  } else {
+    return binarySearch(array, half + 1, high, element);
+  }
+}
+
 function buttonHandler(operation) {
   const numberInput = Number(document.getElementById("numberInput").value);
   const numberInput2 = Number(document.getElementById("numberInput2").value);
@@ -64,4 +97,19 @@ function productExchangeHandler() {
     const message = `${notes[noteKey]} ` + noteKey;
     showNewProductNote(message);
   });
+}
+
+function positionButtonHandler() {
+  let valueList = document.getElementById("numberListInput").value.split(",");
+  valueList = valueList.map((element) => {
+    return Number(element);
+  });
+  const targetValue = Number(
+    document.getElementById("targetNumberInput").value
+  );
+  insertionSortArray(valueList);
+  const resultPos = binarySearch(valueList, 0, valueList.length, targetValue);
+  document.getElementById(
+    "positionText"
+  ).textContent = `O elemento ${targetValue} está na ${resultPos + 1}ª posição`;
 }

@@ -17,33 +17,58 @@
 </head>
 
 <body>
-  <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
-    <div class="col-lg-2 p-5">
-      <div class="input-group m-4">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Valor 1</span>
+  <div class="container-fluid row">
+    <!-- Exercício 1 -->
+
+    <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+      <h1 class="m-4">Exercício 1</h1>
+      <div class="p-5">
+        <div class="input-group m-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Valor 1</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            id="numberInput">
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
-          id="numberInput">
+        <div class="input-group m-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Valor 2</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            id="numberInput2">
+        </div>
       </div>
-      <div class="input-group m-4">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Valor 2</span>
+      <h4>Resultado: <span id="resultadoText">--</span></h4>
+      <div class="p-5 d-flex flex-column justify-content-center align-items-center">
+        <small>Operações</small>
+        <div class="d-flex justify-content-center align-items-center">
+          <input class="btn btn-primary m-2" type="button" value="+" id="buttonPlus" onclick="buttonHandler('+')">
+          <input class="btn btn-primary m-2" type="button" value="-" id="buttonMinus" onclick="buttonHandler('-')">
+          <input class="btn btn-primary m-2" type="button" value="*" id="buttonMultiply" onclick="buttonHandler('*')">
+          <input class="btn btn-primary m-2" type="button" value="/" id="buttonDivide" onclick="buttonHandler('/')">
+          <input class="btn btn-primary m-2" type="button" value="//" id="buttonDivide2" onclick="buttonHandler('/\/')">
+          <input class="btn btn-primary m-2" type="button" value="% " id="buttonRemainder" onclick="buttonHandler('%')">
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
-          id="numberInput2">
       </div>
     </div>
-    <h4>Resultado: <span id="resultadoText">--</span></h4>
-    <div class="col-lg-2 p-5 d-flex flex-column justify-content-center align-items-center">
-      <small>Operações</small>
-      <div class="d-flex justify-content-center align-items-center">
-        <input class="btn btn-primary m-2" type="button" value="+" id="buttonPlus" onclick="buttonHandler('+')">
-        <input class="btn btn-primary m-2" type="button" value="-" id="buttonMinus" onclick="buttonHandler('-')">
-        <input class="btn btn-primary m-2" type="button" value="*" id="buttonMultiply" onclick="buttonHandler('*')">
-        <input class="btn btn-primary m-2" type="button" value="/" id="buttonDivide" onclick="buttonHandler('/')">
-        <input class="btn btn-primary m-2" type="button" value="//" id="buttonDivide2" onclick="buttonHandler('/\/')">
-        <input class="btn btn-primary m-2" type="button" value="% " id="buttonRemainder" onclick="buttonHandler('%')">
+
+    <!-- Exercício 2 -->
+    <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+      <h1 class="m-4">Exercício 2</h1>
+      <div class="p-5">
+        <div class="input-group m-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Valor do Produto R$:</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            id="productInput">
+        </div>
+      </div>
+      <h4>Notas usadas: <span id="notasText"></span></h4>
+      <div class="p-5 d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center">
+          <input class="btn btn-primary m-2" type="button" value="Pagar produto" id="buttonProduct" onclick="productExchangeHandler()">
+          </div>
       </div>
     </div>
   </div>

@@ -111,5 +111,7 @@ function positionButtonHandler() {
   const resultPos = binarySearch(valueList, 0, valueList.length, targetValue);
   document.getElementById(
     "positionText"
-  ).textContent = `O elemento ${targetValue} está na ${resultPos + 1}ª posição`;
+  ).textContent = `Na lista Ordenada ${valueList}, O elemento ${targetValue} está na ${
+    resultPos + 1
+  }ª posição`;
 }

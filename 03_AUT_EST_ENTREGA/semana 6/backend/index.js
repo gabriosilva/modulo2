@@ -18,6 +18,8 @@ app.use(express.static("../frontend/"));
 app.use(express.json());
 
 // endpoints
+
+// returns the workExperience list
 app.get("/workExperience", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -37,6 +39,7 @@ app.get("/workExperience", (req, res) => {
   db.close();
 });
 
+// returns the studyExperience list
 app.get("/studyExperience", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -56,6 +59,10 @@ app.get("/studyExperience", (req, res) => {
   db.close();
 });
 
+
+
+
+// starts the server
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });

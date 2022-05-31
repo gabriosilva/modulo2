@@ -21,7 +21,7 @@ function swapInputs(inputAid, inputBid) {
 }
 
 function validateNumber(phoneNumber) {
-  let re = /^\(?(\d{2})\){1}[\- ]?(\d{5})[- ]{1}(\d{4})$/;
+  let re = /^\({1}(\d{2})\){1}[\- ]?(\d{5})[- ]{1}(\d{4})$/;
   return re.test(phoneNumber);
 }
 

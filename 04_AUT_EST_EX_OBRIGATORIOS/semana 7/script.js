@@ -1,3 +1,9 @@
+// Common functions
+
+function changeElementText(elementId, content) {
+  document.getElementById(elementId).textContent = content;
+}
+
 // exercise 1---------------------------
 
 function increaseInput(inputId) {
@@ -46,16 +52,40 @@ function validateNumber(phoneNumber) {
   return re.test(phoneNumber);
 }
 
-function changeElementText(elementId, content) {
-  document.getElementById(elementId).textContent = content;
-}
-
 function validatePhoneHandler() {
   const phoneNumber = document.getElementById("numberInputPhone").value;
   const isValid = validateNumber(phoneNumber);
   isValid
     ? changeElementText("phoneValidationResult", "Número Válido")
     : changeElementText("phoneValidationResult", "Número Inválido");
+}
+
+// -------------------------------------
+
+// exercise 4---------------------------
+function purchaseFlight(peopleAmount, isDayTimeShift) {
+  let pricePerPerson, discountPercentage;
+  if (isDayTimeShift) {
+    pricePerPerson = 200;
+    discountPercentage = peopleAmount > 50 ? 0.4 : 0;
+  } else {
+    pricePerPerson = 100;
+    discountPercentage = peopleAmount > 50 ? 0.2 : 0;
+  }
+  const totalPrice = peopleAmount * pricePerPerson;
+  const totalDiscount = discountPercentage * peopleAmount * pricePerPerson;
+  const totalWithDiscount = totalPrice - totalDiscount;
+  return totalWithDiscount;
+}
+
+function flightPurchaseHandler() {
+  let isDayTimeShift = Boolean(
+    parseInt(document.getElementById("flightShiftSelector").value)
+  );
+  console.log(isDayTimeShift);
+  const peopleAmount = document.getElementById("flightPersonAmountInput").value;
+  const totalPurchase = purchaseFlight(peopleAmount, isDayTimeShift);
+  changeElementText("flightPurchaseResult", `$${totalPurchase}`);
 }
 
 // -------------------------------------

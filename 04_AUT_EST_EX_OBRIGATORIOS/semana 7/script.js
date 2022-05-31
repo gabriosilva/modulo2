@@ -1,3 +1,5 @@
+// exercise 1---------------------------
+
 function increaseInput(inputId) {
   const htmlElement = document.getElementById(inputId);
   let value = parseInt(htmlElement.value);
@@ -12,19 +14,6 @@ function decreaseInput(inputId) {
   htmlElement.value = newValue;
 }
 
-function swapInputs(inputAid, inputBid) {
-  const elementA = document.getElementById(inputAid);
-  const elementB = document.getElementById(inputBid);
-  const elementAvalue = elementA.value;
-  elementA.value = elementB.value;
-  elementB.value = elementAvalue;
-}
-
-function validateNumber(phoneNumber) {
-  let re = /^\({1}(\d{2})\){1}[\- ]?(\d{5})[- ]{1}(\d{4})$/;
-  return re.test(phoneNumber);
-}
-
 function plusHandler() {
   increaseInput("numberInput");
 }
@@ -33,8 +22,28 @@ function minusHandler() {
   decreaseInput("numberInput");
 }
 
+// -------------------------------------
+
+// exercise 2---------------------------
+
+function swapInputs(inputAid, inputBid) {
+  const elementA = document.getElementById(inputAid);
+  const elementB = document.getElementById(inputBid);
+  const elementAvalue = elementA.value;
+  elementA.value = elementB.value;
+  elementB.value = elementAvalue;
+}
+
 function swapHandler() {
   swapInputs("numberInputA", "numberInputB");
+}
+
+// -------------------------------------
+
+// exercise 3---------------------------
+function validateNumber(phoneNumber) {
+  let re = /^\({1}(\d{2})\){1}[\- ]?(\d{5})[- ]{1}(\d{4})$/;
+  return re.test(phoneNumber);
 }
 
 function changeElementText(elementId, content) {
@@ -48,3 +57,5 @@ function validatePhoneHandler() {
     ? changeElementText("phoneValidationResult", "Número Válido")
     : changeElementText("phoneValidationResult", "Número Inválido");
 }
+
+// -------------------------------------

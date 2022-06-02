@@ -196,9 +196,15 @@ function processStudentGrades(studentsArray) {
 }
 
 function processAndShowGeneralGrades() {
-  examGrades.sort();
-  homeworkGrades.sort();
-  studentGrades.sort();
+  examGrades.sort(function (a, b) {
+    return a - b;
+  });
+  homeworkGrades.sort(function (a, b) {
+    return a - b;
+  });
+  studentGrades.sort(function (a, b) {
+    return a - b;
+  });
   let result = {
     averageGrade: 0,
     averageExamGrade: 0,

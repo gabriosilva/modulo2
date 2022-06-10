@@ -5,7 +5,7 @@ const app = express();
 
 // listen in all network cards (access it at localhost:80)
 const hostname = "0.0.0.0";
-const port = 80;
+const port = 5000;
 
 // loads sqlite3 database
 const sqlite3 = require("sqlite3").verbose();

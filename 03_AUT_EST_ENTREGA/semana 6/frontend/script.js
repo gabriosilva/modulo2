@@ -27,14 +27,14 @@ function cardFactory(title, type, duration, logo) {
 }
 
 async function fetchStudyCards() {
-  const responseRaw = await fetch("/studyExperience");
+  const responseRaw = await fetch("http://localhost:5000/studyExperience");
   const responseJson = await responseRaw.json();
   studyCards = responseJson.studyExperiences;
   return studyCards;
 }
 
 async function fetchWorkCards() {
-  const responseRaw = await fetch("/workExperience");
+  const responseRaw = await fetch("http://localhost:5000/workExperience");
   const responseJson = await responseRaw.json();
   workCards = responseJson.workExperiences;
   return workCards;
@@ -55,7 +55,7 @@ function parseCardDate(startDate, endDate) {
     "nov",
     "dec",
   ];
-  console.log(endDate)
+  console.log(endDate);
   console.log(startDate, endDate);
   return `${months[startDate.getMonth()]} de ${startDate.getFullYear()} - ${
     months[endDate.getMonth()]

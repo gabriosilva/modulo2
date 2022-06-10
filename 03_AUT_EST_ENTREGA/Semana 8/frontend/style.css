@@ -1,0 +1,97 @@
+.home-img {
+  width: 28rem;
+  object-fit: contain;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+.work-card {
+  width: 20rem;
+  height: 28rem;
+  transition: 0.2s ease all;
+  margin: 3rem;
+}
+
+.work-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#profilePic {
+  width: 20rem;
+  border-radius: 10rem;
+  border-color: rgb(43, 43, 43);
+  border-width: 1px;
+}
+
+#addBtn {
+}
+
+.custom-btn {
+  font-size: 1.9rem;
+  font-weight: bold;
+  border-style: none;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 1.9rem;
+  transition: 0.2s ease all;
+}
+
+.custom-btn:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #2979ff;
+  color: #fff;
+}
+
+.remove-link {
+  transition: 0.2 ease all;
+  text-decoration: underline;
+}
+
+.remove-link:hover {
+}
+
+.font-inter {
+  font-family: "Inter";
+}
+
+.font-montserrat {
+  font-family: "Montserrat";
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+  transition: ease all 0.2s;
+}
+
+a:hover {
+  font-size: 2rem;
+}
+
+section {
+  scroll-snap-align: start;
+}

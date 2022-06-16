@@ -6,15 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="./style.css" rel="stylesheet">
   <title>Exercício 4</title>
 </head>
 
 <body>
-  <label for="inputNumber4">Insira a quantidade de números fibonacci a ser calculada.</label>
-  <input type="number" id="numerInputEx4" name="inputNumber4" />
-  <h3>Resultado: <span id="resultadoEx4"></span></h3>
-  <button onclick="exercise4Handler()">Mostrar Sequência</button>
-  <script src="script.js"></script>
+  <div class="container-fluid full-height d-flex flex-column justify-content-center">
+    <div class="offset-5 col-2 text-center">
+      <div class="mb-3">
+        <h1>Fibonacci</h1>
+        <label for="numerInputEx4" class="form-label">Insira o número de sequências a ser exibido</label>
+        <input type="text" class="form-control" id="numerInputEx4">
+        <div class="form-text">Apenas números positivos e maiores que zero são aceitos.</div>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="exercise4Handler()">Exibir</button>
+    </div>
+    <div class="offset-5 col-2 mt-5 text-center">
+      <h4>Resultado: <span id="resultadoEx4"></span></h4>
+    </div>
+    <script src="script.js"></script>
+  </div>
 </body>
 
 </html>

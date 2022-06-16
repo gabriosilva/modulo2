@@ -6,17 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="./style.css" rel="stylesheet">
   <title>Exercício 3</title>
 </head>
 
 <body>
-  <h2>Insira três nomes abaixo</h2>
-  <input type="text" id="textInputEx3Nome1" placeholder="Nome 1" />
-  <input type="text" id="textInputEx3Nome2" placeholder="Nome 2" />
-  <input type="text" id="textInputEx3Nome3" placeholder="Nome 2" />
-  <h3>Resultado: <span id="resultadoEx3"></span></h3>
-  <button onclick="exercise3Handler()">Ordenar nomes</button>
-  <script src="script.js"></script>
+  <div class="container-fluid full-height d-flex flex-column justify-content-center">
+    <div class="offset-5 col-2 text-center">
+      <div class="mb-3">
+        <h1>Ordenar Nomes</h1>
+        <label for="textInputEx3Nome1" class="form-label">Nome 1</label>
+        <input type="text" class="form-control" id="textInputEx3Nome1">
+        <label for="textInputEx3Nome2" class="form-label">Nome 2</label>
+        <input type="text" class="form-control" id="textInputEx3Nome2">
+        <label for="textInputEx3Nome3" class="form-label">Nome 3</label>
+        <input type="text" class="form-control" id="textInputEx3Nome3">
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="exercise3Handler()">Ordenar</button>
+    </div>
+    <div class="offset-5 col-2 mt-5 text-center">
+      <h4>Resultado: <span id="resultadoEx3"></span></h4>
+    </div>
+    <script src="script.js"></script>
+  </div>
 </body>
 
 </html>
